@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Personal Developer Portfolio & Project Showcase/index.html"
+    },
+    {
+      "source": "/css/:path*",
+      "destination": "/Personal Developer Portfolio & Project Showcase/css/:path*"
+    },
+    {
+      "source": "/js/:path*",
+      "destination": "/Personal Developer Portfolio & Project Showcase/js/:path*"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "/Personal Developer Portfolio & Project Showcase/assets/:path*"
+    }
+  ]
+}
