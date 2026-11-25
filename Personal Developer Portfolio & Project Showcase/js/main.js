@@ -16,7 +16,7 @@ function applyTheme(theme) {
   const dark = theme === "dark";
   themeBtn.setAttribute("aria-pressed", String(dark));
   themeBtn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
-  if (themeMeta) themeMeta.setAttribute("content", dark ? "#07111f" : "#f6f1e8");
+  if (themeMeta) themeMeta.setAttribute("content", dark ? "#1b2838" : "#f3f2ee");
 }
 
 themeBtn.addEventListener("click", () => {

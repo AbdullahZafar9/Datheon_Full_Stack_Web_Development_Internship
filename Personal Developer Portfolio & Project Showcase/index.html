@@ -9,7 +9,7 @@
       content="Portfolio of Abdullah Zafar, a full-stack web engineer in Punjab, Pakistan. Next.js, React, TypeScript, and Supabase work including Vignette, SingleCart, Urban Bites, and Skin Vision."
     />
     <meta name="author" content="Abdullah Zafar" />
-    <meta name="theme-color" content="#07111f" />
+    <meta name="theme-color" content="#1b2838" />
     <meta property="og:title" content="Abdullah Zafar — Full-Stack Web Engineer" />
     <meta
       property="og:description"
@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -33,7 +33,7 @@
           (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
         document.documentElement.setAttribute("data-theme", theme);
         var meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute("content", theme === "light" ? "#f6f1e8" : "#07111f");
+        if (meta) meta.setAttribute("content", theme === "light" ? "#f3f2ee" : "#1b2838");
       })();
     </script>
     <script type="application/ld+json">
@@ -111,30 +111,16 @@
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Full-Stack Web Engineer · Punjab, Pakistan</p>
-          <h1 id="hero-title">Abdullah <em>Zafar</em></h1>
+          <p class="eyebrow">Full-stack web engineer · Punjab, Pakistan</p>
+          <h1 id="hero-title">Abdullah<br />Zafar</h1>
           <p class="lede">
-            Computer Science graduate engineering production web systems — editorial motion,
-            multi-tenant commerce, and real-time data — with Next.js, React, TypeScript, and Supabase.
+            I build the interface and the data path behind it. Next.js and TypeScript on the client.
+            Supabase and PostgreSQL where the records actually live.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">View the work</a>
-            <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+            <a class="btn btn-primary" href="#work">Selected work</a>
+            <a class="btn btn-ghost" href="#contact">Email me</a>
           </div>
-          <dl class="hero-facts">
-            <div>
-              <dt>Degree</dt>
-              <dd>BSCS, 2025</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>Web systems</dd>
-            </div>
-            <div>
-              <dt>Based</dt>
-              <dd>Punjab, PK</dd>
-            </div>
-          </dl>
         </div>
         <figure class="portrait">
           <img
@@ -143,11 +129,25 @@
             width="1024"
             height="1024"
           />
-          <figcaption>
-            <span>Available for engineering roles</span>
-            <strong>CASE Institute of Technology</strong>
-          </figcaption>
         </figure>
+        <dl class="spec">
+          <div>
+            <dt>Qualification</dt>
+            <dd>Bachelor in Computer Science</dd>
+          </div>
+          <div>
+            <dt>University</dt>
+            <dd>Sir Syed CASE IT</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Full-stack development</dd>
+          </div>
+          <div>
+            <dt>Based</dt>
+            <dd>Islamabad, Pak</dd>
+          </div>
+        </dl>
       </section>
 
       <section id="work" class="section" aria-labelledby="work-title">
@@ -159,22 +159,18 @@
             multi-tenant marketplace, a dining platform, and a machine-learning mobile final-year project.
           </p>
         </div>
-        <div class="project-grid">
+        <div class="project-list">
           <article class="project">
-            <div class="project-visual visual-vignette" aria-hidden="true">
-              <span>Archive</span>
-              <strong>Vignette</strong>
-            </div>
+            <p class="num">01</p>
             <div class="project-body">
-              <div class="project-meta">
-                <span>01</span>
+              <div class="project-top">
+                <h3>Vignette</h3>
                 <span class="status status-live">Live</span>
               </div>
-              <h3>Vignette</h3>
-              <p class="project-kicker">Technical motion architecture &amp; media optimization</p>
+              <p class="project-kicker">Motion architecture and media pipeline</p>
               <p>
-                Editorial photography archive with scroll-driven plates, inertia, and a cloud image
-                pipeline that serves AVIF and WebP.
+                Editorial photography archive. Scroll drives the plates, a filmstrip tracks the
+                viewport, and images ship as AVIF or WebP through a CDN.
               </p>
               <ul class="tags">
                 <li>Next.js</li>
@@ -190,22 +186,16 @@
           </article>
 
           <article class="project">
-            <div class="project-visual visual-cart" aria-hidden="true">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <strong>SingleCart</strong>
-            </div>
+            <p class="num">02</p>
             <div class="project-body">
-              <div class="project-meta">
-                <span>02</span>
+              <div class="project-top">
+                <h3>SingleCart</h3>
                 <span class="status status-live">Live</span>
               </div>
-              <h3>SingleCart</h3>
-              <p class="project-kicker">Multi-tenant SaaS marketplace</p>
+              <p class="project-kicker">Multi-tenant marketplace</p>
               <p>
-                A three-sided digital mall: many boutiques, one cart, live order tracking, and
-                PostgreSQL row-level security between tenants.
+                Three sides of a mall on one product. Shops stay isolated with PostgreSQL row-level
+                security. Orders move on a Supabase WebSocket pipeline.
               </p>
               <ul class="tags">
                 <li>Supabase</li>
@@ -221,20 +211,16 @@
           </article>
 
           <article class="project">
-            <div class="project-visual visual-bites" aria-hidden="true">
-              <span>Since 2015</span>
-              <strong>Urban Bites</strong>
-            </div>
+            <p class="num">03</p>
             <div class="project-body">
-              <div class="project-meta">
-                <span>03</span>
+              <div class="project-top">
+                <h3>Urban Bites</h3>
                 <span class="status status-live">Live</span>
               </div>
-              <h3>Urban Bites</h3>
-              <p class="project-kicker">Dynamic cafe &amp; dining platform</p>
+              <p class="project-kicker">Cafe catalog and table booking</p>
               <p>
-                Menu filtering, dish configurators, and table booking on top of a Supabase catalog,
-                with a responsive interface built in React.
+                React menu with multi-field filtering, dish configuration, and a booking flow that
+                keeps its state if the page reloads. The catalog sits in Supabase.
               </p>
               <ul class="tags">
                 <li>React</li>
@@ -250,20 +236,16 @@
           </article>
 
           <article class="project">
-            <div class="project-visual visual-skin" aria-hidden="true">
-              <span>FYP</span>
-              <strong>Skin Vision</strong>
-            </div>
+            <p class="num">04</p>
             <div class="project-body">
-              <div class="project-meta">
-                <span>04</span>
+              <div class="project-top">
+                <h3>Skin Vision</h3>
                 <span class="status">Mobile</span>
               </div>
-              <h3>Skin Vision</h3>
-              <p class="project-kicker">ML-powered mobile application</p>
+              <p class="project-kicker">Final-year machine-learning app</p>
               <p>
-                Final-year Flutter app that sends skin images to a remote inference API, keeps an
-                encrypted history, and finds nearby doctors.
+                Flutter client sends skin images to a remote inference API, stores history in
+                Firebase, and ranks nearby doctors with the Haversine formula.
               </p>
               <ul class="tags">
                 <li>Flutter</li>
@@ -324,50 +306,24 @@
           <h2 id="skills-title">Tech stack</h2>
           <p>Tools I use on shipped work, grouped the way I actually reach for them.</p>
         </div>
-        <div class="skills-grid">
-          <article class="skill-group">
-            <h3>Languages &amp; frameworks</h3>
-            <ul>
-              <li>JavaScript (ES6+)</li>
-              <li>TypeScript</li>
-              <li>React.js</li>
-              <li>Next.js</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Tailwind CSS</li>
-              <li>C++</li>
-            </ul>
-          </article>
-          <article class="skill-group">
-            <h3>Backend &amp; cloud</h3>
-            <ul>
-              <li>Supabase</li>
-              <li>PostgreSQL</li>
-              <li>Row-Level Security</li>
-              <li>WebSockets</li>
-              <li>Firebase</li>
-              <li>REST APIs</li>
-            </ul>
-          </article>
-          <article class="skill-group">
-            <h3>Mobile</h3>
-            <ul>
-              <li>Flutter</li>
-              <li>Dart</li>
-              <li>GetX</li>
-              <li>Geolocator</li>
-            </ul>
-          </article>
-          <article class="skill-group">
-            <h3>Tools &amp; workflow</h3>
-            <ul>
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>Async state</li>
-              <li>UI systems</li>
-            </ul>
-          </article>
-        </div>
+        <dl class="stack">
+          <div>
+            <dt>Languages</dt>
+            <dd>JavaScript, TypeScript, HTML5, CSS3, C++</dd>
+          </div>
+          <div>
+            <dt>Frameworks</dt>
+            <dd>React, Next.js, Tailwind CSS, Flutter, Dart, GetX</dd>
+          </div>
+          <div>
+            <dt>Data</dt>
+            <dd>Supabase, PostgreSQL, row-level security, WebSockets, Firebase, REST</dd>
+          </div>
+          <div>
+            <dt>Practice</dt>
+            <dd>Git, GitHub, async state, interface systems, geolocation</dd>
+          </div>
+        </dl>
       </section>
 
       <section id="contact" class="section" aria-labelledby="contact-title">
