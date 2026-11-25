@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager — Dynamic Task Manager &amp; Productivity Tracker</title>
+    <meta
+      name="description"
+      content="A responsive task manager with create, edit, delete, categories, due dates, filters, search, drag-and-drop order, and localStorage persistence."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#task-list">Skip to tasks</a>
+    <div class="app">
+      <header class="top">
+        <div>
+          <p class="mark">Task 2</p>
+          <h1>Task Manager</h1>
+          <p class="sub">Work, personal, and study. Saved in this browser.</p>
+        </div>
+        <p class="count" id="count" aria-live="polite">0 open</p>
+      </header>
+
+      <form id="task-form" class="composer">
+        <label class="title-field">
+          <span>Task</span>
+          <input id="title" name="title" type="text" maxlength="140" placeholder="What needs doing?" required />
+        </label>
+        <label>
+          <span>Category</span>
+          <select id="category" name="category">
+            <option>Work</option>
+            <option>Personal</option>
+            <option>Study</option>
+          </select>
+        </label>
+        <label>
+          <span>Due</span>
+          <input id="due" name="due" type="date" />
+        </label>
+        <button id="submit-btn" class="primary" type="submit">Add task</button>
+        <button id="cancel-edit" class="ghost hidden" type="button">Cancel</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="tablist" aria-label="Filter by status">
+          <button type="button" class="chip is-on" data-filter="all">All</button>
+          <button type="button" class="chip" data-filter="active">Active</button>
+          <button type="button" class="chip" data-filter="completed">Completed</button>
+        </div>
+        <label class="search">
+          <span class="visually-hidden">Search tasks</span>
+          <input id="search" type="search" placeholder="Search tasks" />
+        </label>
+      </div>
+
+      <p id="empty" class="empty">No tasks yet. Add one above.</p>
+      <ul id="task-list" class="list" aria-label="Tasks"></ul>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
